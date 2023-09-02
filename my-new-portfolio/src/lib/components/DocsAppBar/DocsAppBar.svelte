@@ -1,11 +1,13 @@
 <script lang="ts">
     import { page } from '$app/stores'
+    import { goto } from '$app/navigation';
     
     import { AppBar, Avatar, LightSwitch, RadioGroup, RadioItem } from "@skeletonlabs/skeleton";
     
 
-    let value = 0;
-    let path = location.pathname;
+    let value: number = 0;
+
+
 
 </script>
 
@@ -16,9 +18,9 @@
 
     <div>
 		<RadioGroup active="variant-filled-secondary" border="none">
-			<RadioItem href="/"  bind:group={value} name="justify" value={0}>Home</RadioItem>
-			<RadioItem href="/about"  bind:group={value} name="justify" value={1}>About</RadioItem>
-			<RadioItem href="/projects" on:click={() => (path = location.pathname)} bind:group={value} name="justify" value={2}>Project</RadioItem>
+			<RadioItem bind:group={value} name="justify" value={0} on:click = {() => goto('/') }>Home</RadioItem>
+			<RadioItem bind:group={value} name="justify" value={1} on:click = {() => goto('/about') }>About</RadioItem>
+			<RadioItem bind:group={value} name="justify" value={2} on:click = {() => goto('/projects') }>Projects</RadioItem>
 		</RadioGroup>
 	</div>
 
