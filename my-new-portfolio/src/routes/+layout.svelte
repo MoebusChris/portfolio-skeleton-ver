@@ -32,7 +32,7 @@
 	<slot />
 
 	<!-- pageFooter -->
-	<svelte:fragment slot="footer">
+	<svelte:fragment slot="pageFooter">
 		<DocsFooter />
 	</svelte:fragment>
 </AppShell>

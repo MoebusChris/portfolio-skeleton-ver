@@ -19,7 +19,7 @@
                     <button type="button" class="btn-icon variant-soft-primary hover:variant-filled-primary"><i class="fa-solid fa-envelope"></i></button>
                 </div>
                 <div class="flex space-y-4">
-                    <p class="text-primary-500"><small>&copy;<script></script>Subeom Jeong</small></p>
+                    <p class="text-primary-500"><small>With Loyalty and Trust to Customers</small></p>
                 </div>
             </section>
     </div>
