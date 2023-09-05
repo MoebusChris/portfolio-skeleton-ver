@@ -9,9 +9,6 @@
 </script>
 
 <div>
-	<div class="flex flex-col items-center xl:items-start text-center xl:text-left space-y-4">
-
-	</div>
 		<!-- Hero -->
 		<header id="hero">
 			<div class="section-container">
