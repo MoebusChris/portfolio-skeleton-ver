@@ -1,7 +1,4 @@
 <script lang="ts">
-	import '../app.postcss';
-
-
 	// Highlight JS
 	import hljs from 'highlight.js';
 	import 'highlight.js/styles/github-dark.css';
@@ -13,16 +10,47 @@
 	import { storePopup } from '@skeletonlabs/skeleton';
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
 
+	// SvelteKit Imports
+	import { browser } from '$app/environment';
+	import { page } from '$app/stores';
+	import { afterNavigate } from '$app/navigation';
+
+	// Components & Utility
+	import { prefersReducedMotionStore } from '@skeletonlabs/skeleton';
+
 	// My Components
 	import DocsAppBar from '$lib/components/DocsAppBar/DocsAppBar.svelte';
 	import DocsFooter from '$lib/components/DocsFooter/DocsFooter.svelte';
 
+	// Global Stylesheets
+	import '../app.postcss';
 
+	// Scroll heading into view
+	function scrollHeadingIntoView(): void {
+		if (!window.location.hash) return;
+		const elemTarget: HTMLElement | null = document.querySelector(window.location.hash);
+		if (elemTarget) elemTarget.scrollIntoView({ behavior: 'smooth' });
+	}
+
+	// Lifecycle
+	afterNavigate((params: any) => {
+		// Scroll to top
+		const isNewPage: boolean = params.from && params.to && params.from.route.id !== params.to.route.id;
+		const elemPage = document.querySelector('#page');
+		if (isNewPage && elemPage !== null) {
+			elemPage.scrollTop = 0;
+		}
+		// Scroll heading into view
+		scrollHeadingIntoView();
+	});
+
+	// Reactive
+	$: allyPageSmmothScroll = !$prefersReducedMotionStore ? 'scroll-smooth' : '';
 </script>
 
 <!-- App Shell -->
 
-<AppShell>
+<AppShell regionPage={allyPageSmmothScroll}>
 	<!-- Header -->
 	<svelte:fragment slot="header">
 		<DocsAppBar />
