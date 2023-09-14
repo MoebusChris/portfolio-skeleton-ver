@@ -7,42 +7,23 @@
 
 </script>
 
-<div class="py-6">
-    <h3 class="h2">
-        Development
-    </h3>
-    <section class="grid grid-cols-2 md:grid-cols-3 gap-4 py-8">
-
-        <div>
-            <div class="group relative items-center justify-center overflow-hidden">
-                <div class="absolute duration-500 group-hover:translate-y-[-100%]">
-                    <img class="h-auto max-w-full" src={getImageLink({ id: 'qucYweSE3ZY', w: 1280, h: 1280 })} alt="" />
-                </div>
-
-
-                    <div class="h-96 max-h-full bg-primary-500 flex flex-col items-center justify-center text-center">
-                        <p class="text-white">Project-1</p>
-                    </div>
-
-            </div>
-        </div>
-
-
-
-
-
-
-
-
-    	<div>
-    		<img class="h-auto max-w-full rounded-lg" src={getImageLink({ id: 'qucYweSE3ZY', w: 1280, h: 1280 })} alt="" />
-    	</div>
-    	<div>
-    		<img class="h-auto max-w-full rounded-lg" src={getImageLink({ id: 'qucYweSE3ZY', w: 1280, h: 1280 })} alt="" />
-    	</div>
-    </section>
-
+<div class="space-y-4 md:space-y-8">
+    <header class="space-y-4">
+        <h2 class="h2">
+            Development
+        </h2>
+    </header>
+    
+    <div class="grid grid-cols-3 md:grid-cols-3 gap-4 py-8">
+        <a href="/" class="group aspect-square rounded-container-token overflow-hidden shadow-xl variant-filled-primary">
+                <img class="w-full aspect-square transition-all duration-[500] group-hover:-translate-y-[101%]" src={getImageLink({ id: 'qucYweSE3ZY', w: 1280, h: 1280 })} alt="" />
+                <caption class="w-full h-full flex justify-center items-center group-hover:-translate-y-full">Project-1</caption>
+        </a>
+    </div>
 </div>
+
+
+
 
 <div class="py-6">
     {#each cardLists as cardList, i}

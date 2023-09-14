@@ -25,7 +25,7 @@
 	</div>
 
     <svelte:fragment slot="trail">
-        <LightSwitch fillLight="fill-primary-50" />
+        <LightSwitch fillLight="fill-surface-50" />
     </svelte:fragment>
 
 </AppBar>
