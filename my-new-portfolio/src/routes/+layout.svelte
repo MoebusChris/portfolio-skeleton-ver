@@ -45,12 +45,12 @@
 	});
 
 	// Reactive
-	$: allyPageSmmothScroll = !$prefersReducedMotionStore ? 'scroll-smooth' : '';
+	$: allyPageSmoothScroll = !$prefersReducedMotionStore ? 'scroll-smooth' : '';
 </script>
 
 <!-- App Shell -->
 
-<AppShell regionPage={allyPageSmmothScroll}>
+<AppShell regionPage={allyPageSmoothScroll} scrollGutter="auto">
 	<!-- Header -->
 	<svelte:fragment slot="header">
 		<DocsAppBar />

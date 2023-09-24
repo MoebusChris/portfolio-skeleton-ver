@@ -9,7 +9,7 @@
     <!--  --- -->
 	<hr class="devider-section opacity-90" />
 
-    <section>
+    <section class="page-padding">
         <ProjectsDev />
     </section>
 </div>

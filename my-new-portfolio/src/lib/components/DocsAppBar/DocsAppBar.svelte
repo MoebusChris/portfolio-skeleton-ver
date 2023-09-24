@@ -11,7 +11,7 @@
 
 </script>
 
-<AppBar gridColumns="grid-cols-3" slotDefault="place-self-center" slotTrail="place-content-end" background="bg-transparent" class="w-full mx-auto max-w-7xl">
+<AppBar gridColumns="grid-cols-3" slotDefault="place-self-center" slotTrail="place-content-end" background="bg-transparent" padding="px-0 py-4" class="nav-container">
     <svelte:fragment slot="lead">
         <Avatar src="https://images.unsplash.com/photo-1617296538902-887900d9b592?ixid=M3w0Njc5ODF8MHwxfGFsbHx8fHx8fHx8fDE2ODc5NzExMDB8&ixlib=rb-4.0.3&w=128&h=128&auto=format&fit=crop" width="w-12" rounded="rounded-full" />
     </svelte:fragment>
