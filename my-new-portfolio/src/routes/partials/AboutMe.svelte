@@ -1,6 +1,5 @@
-<div class="space-y-4 md:space-y-8">
+<div class="space-y-8 md:space-y-16">
     <span class="grid gap-8 grid-cols-1">
-        
         <p class="heading-font">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ipsam vero ab maiores harum. Delectus deserunt doloremque soluta mollitia enim pariatur inventore, eius quam hic, explicabo similique, nemo asperiores sunt.
         </p>
@@ -32,11 +31,8 @@
 </div>
 
 <style lang="postcss">
-    .about-section-container {
-    @apply w-full mx-auto p-4 py-16 md:py-20;
-    }
     .resume-button-container {
-    @apply flex justify-center w-full mx-auto p-4;
+    @apply flex justify-center w-full mx-auto;
     }
     .heading-font {
     @apply text-3xl;
