@@ -6,45 +6,36 @@
 	import HomeContact from "./partials/HomeContact.svelte";
 </script>
 
-<div class="w-full max-w-7xl mx-auto">
+<div class="page-container-wide page-padding">
 		<!-- Hero -->
 		<header id="hero">
-			<div class="section-container">
+			<div>
 				<HomeHero />
 			</div>
 		</header>
 		<!--  --- -->
-		<hr class="devider-section w-20 opacity-90" />
+		<hr class="devider-section" />
 		<!-- Stats -->
 		<section id="stats">
-			<div class="section-container">
+			<div>
 				<HomeStat />
 			</div>
 		</section>
 		<!--  --- -->
-		<hr class="devider-section opacity-90" />
+		<hr class="devider-section" />
 		<!-- Abilities -->
 		<section id="Abilities">
-			<div class="section-container">
+			<div>
 				<HomeAbilities />
 			</div>
 		</section>
 		<!--  --- -->
-		<hr class="devider-section opacity-90" />
+		<hr class="devider-section" />
 		<!-- Abilities -->
 		<section id="Contact">
-			<div class="section-container">
+			<div>
 				<HomeContact />
 			</div>
 		</section>
 	
 </div>
-
-<style lang="postcss">
-		.section-container {
-		@apply w-full max-w-7xl mx-auto p-4 py-16 md:py-24;
-		}
-		.devider-section {
-		@apply w-24 max-w-7xl
-		}
-</style>

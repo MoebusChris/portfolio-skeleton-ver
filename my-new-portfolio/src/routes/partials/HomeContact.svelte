@@ -11,7 +11,7 @@
 			rel="noreferrer"
 		>
             <i class="fa-solid fa-envelope"></i>
-			<span>Contact</span>
+			<span>Contact Me</span>
 		</a>
 
 	</div>
