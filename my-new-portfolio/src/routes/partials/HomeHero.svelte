@@ -8,7 +8,7 @@
 
         <span class="order-2 md:order-1 max-w-2xl space-y-8">
             
-                <h1 class="h1">Hello, I'm Chris</h1>
+                <h1 class="text-3xl md:text-5xl lg:text-7xl">Hello, I'm Chris</h1>
                 <p class="text-2xl">
                     A full stack developer + financial professional. Interested in social media marketing and contents creation. I'm pursuing one-man entrepreneur.
                 </p>
@@ -25,7 +25,7 @@
 
                     
         </span>
-        <Avatar src="https://images.unsplash.com/photo-1617296538902-887900d9b592?ixid=M3w0Njc5ODF8MHwxfGFsbHx8fHx8fHx8fDE2ODc5NzExMDB8&ixlib=rb-4.0.3&w=128&h=128&auto=format&fit=crop" width="w-24 md:w-96" rounded="rounded-full" class="order-1 md:order-2" />
+        <Avatar src="https://images.unsplash.com/photo-1617296538902-887900d9b592?ixid=M3w0Njc5ODF8MHwxfGFsbHx8fHx8fHx8fDE2ODc5NzExMDB8&ixlib=rb-4.0.3&w=128&h=128&auto=format&fit=crop" width="w-24 md:w-60 lg:w-96" rounded="rounded-full" class="order-1 md:order-2" />
         
 
         

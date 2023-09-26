@@ -35,9 +35,9 @@
     @apply flex justify-center w-full mx-auto;
     }
     .heading-font {
-    @apply text-3xl;
+    @apply text-2xl md:text-3xl;
     }
     .body-paragraph-font {
-    @apply text-xl opacity-80;
+    @apply text-lg md:text-xl opacity-80;
     }
 </style>

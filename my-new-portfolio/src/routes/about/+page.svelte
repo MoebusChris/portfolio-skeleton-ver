@@ -7,7 +7,7 @@
 
 <div class="page-container-wide page-padding">
     <div>
-        <h2 class="text-center text-7xl">About Me</h2>
+        <h2 class="text-center text-3xl md:text-5xl lg:text-7xl">About Me</h2>
     </div>
 
     <!-- --- -->
