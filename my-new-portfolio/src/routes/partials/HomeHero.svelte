@@ -25,7 +25,7 @@
 
                     
         </span>
-        <Avatar src="https://images.unsplash.com/photo-1617296538902-887900d9b592?ixid=M3w0Njc5ODF8MHwxfGFsbHx8fHx8fHx8fDE2ODc5NzExMDB8&ixlib=rb-4.0.3&w=128&h=128&auto=format&fit=crop" width="w-24 md:w-60 lg:w-96" rounded="rounded-full" class="order-1 md:order-2" />
+        <Avatar src="https://images.unsplash.com/photo-1617296538902-887900d9b592?ixid=M3w0Njc5ODF8MHwxfGFsbHx8fHx8fHx8fDE2ODc5NzExMDB8&ixlib=rb-4.0.3&w=128&h=128&auto=format&fit=crop" width="w-24 md:w-60 lg:w-96" rounded="rounded-full" class="order-1 md:order-2 shadow-2xl" />
         
 
         
