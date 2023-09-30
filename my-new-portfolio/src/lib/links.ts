@@ -1,20 +1,23 @@
 // Link list
 
 export const menuLists = [
-    {
-        title: 'Home',
+    {   
+        id: 1,
+        label: 'Home',
         link: [
             { href: '/' },
         ],
     },
-    {
-        title: 'About',
+    {   
+        id: 2,
+        label: 'About',
         link: [
             { href: '/about' },
         ],
     },
-    {
-        title: 'Projects',
+    {   
+        id: 3,
+        label: 'Projects',
         link: [
             { href: '/projects' }
         ]
