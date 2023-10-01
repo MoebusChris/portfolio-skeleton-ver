@@ -21,9 +21,14 @@
 	// My Components
 	import DocsAppBar from '$lib/components/DocsAppBar/DocsAppBar.svelte';
 	import DocsFooter from '$lib/components/DocsFooter/DocsFooter.svelte';
+	import DocsDrawer from '$lib/components/DocsDrawer/DocsDrawer.svelte';
 
 	// Global Stylesheets
 	import '../app.postcss';
+
+	// Initialize Store for Modals and Drawers
+	import { initializeStores } from '@skeletonlabs/skeleton';
+	initializeStores();
 
 	// Scroll heading into view
 	function scrollHeadingIntoView(): void {
@@ -48,8 +53,10 @@
 	$: allyPageSmoothScroll = !$prefersReducedMotionStore ? 'scroll-smooth' : '';
 </script>
 
-<!-- App Shell -->
+<!-- Overlay -->
+<DocsDrawer />
 
+<!-- App Shell -->
 <AppShell regionPage={allyPageSmoothScroll} scrollGutter="auto">
 	<!-- Header -->
 	<svelte:fragment slot="header">

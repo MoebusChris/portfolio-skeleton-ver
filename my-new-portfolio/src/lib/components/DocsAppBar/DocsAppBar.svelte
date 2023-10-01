@@ -10,33 +10,22 @@
     
 
     // Store
-
+    import { getDrawerStore } from '@skeletonlabs/skeleton';
+    const drawerStore = getDrawerStore();
     
 
     // Local
     let currentUrl;
 
     // Drawer Handler
+    function drawerOpen(): void {
+        const s: DrawerSettings = { id: 'doc-sidenav' };
+        drawerStore.open(s);
+    }
 
-
-
-
-
-   /* 
-    // Local
-    import { menuLists } from '$lib/links';
-	import { link } from 'fs';
-
-    // Lifecycle
-    page.subscribe((page) => {
-        // ex: /basepath/
-        let basepath: string = page.url.pathname.split('/')[1];
-        if (!basepath) return;
-    });
-
-    // Reactive
-    $: navItemActive = (href: string) => ($page.url.pathname?.includes(href) ? 'bg-primary-active-token' : '');
-    */
+    function drawerClose(): void {
+        drawerStore.close();
+    }
 
     // Lifecycle
     page.subscribe((page) => {
@@ -67,7 +56,8 @@
 
     <svelte:fragment slot="lead">
         <div class="md:!hidden">
-            <button class="btn-icon btn-icon-sm md:hidden">
+            <!-- Hamburger Menu -->
+            <button on:click={drawerOpen} class="btn-icon btn-icon-sm md:hidden">
                 
                 <i class="fa-solid fa-bars text-2xl" />
             </button>
@@ -77,21 +67,7 @@
             <Avatar  src="https://images.unsplash.com/photo-1617296538902-887900d9b592?ixid=M3w0Njc5ODF8MHwxfGFsbHx8fHx8fHx8fDE2ODc5NzExMDB8&ixlib=rb-4.0.3&w=128&h=128&auto=format&fit=crop" alt=" " width="w-12" rounded="rounded-full" />
         </a>
     </svelte:fragment>
-
-
     
-    <!--<section class="hidden md:block">
-        <nav class="flex flex-col md:flex-row gap-2 border md:border-0 border-surface-100-800-token bg-surface-50/50 dark:bg-surface-900/50 backdrop-blur-lg rounded-bl-container-token rounded-br-container-token md:rounded-token p-2 shadow-xl">
-            {#each menuLists as segment, i }
-                {#each segment.link as { href } }
-                    <a {href} class={navItemActive(href)} data-sveltekit-preload-data="hover">
-                        {segment.title}
-                    </a>
-                {/each}
-            {/each}
-        </nav>
-    </section> -->
-    <!-- Button -->
     <section class="hidden md:block">
         <nav class="flex flex-col md:flex-row gap-2 border md:border-0 border-surface-100-800-token bg-surface-50/50 dark:bg-surface-900/50 backdrop-blur-lg rounded-bl-container-token rounded-br-container-token md:rounded-token p-2 shadow-xl">
             <a href='/' data-sveltekit-preload-data="hover" class="btn md:btn-sm hover:variant-soft-primary {menuItemActive('/')}">Home</a>
