@@ -11,6 +11,7 @@
 
     // Store
     import { getDrawerStore } from '@skeletonlabs/skeleton';
+	import { link } from 'fs';
     const drawerStore = getDrawerStore();
     
 
@@ -23,7 +24,8 @@
         drawerStore.open(s);
     }
 
-    function drawerClose(): void {
+    function onClickAnchor(): void {
+        currentUrl = undefined;
         drawerStore.close();
     }
 
@@ -70,9 +72,11 @@
     
     <section class="hidden md:block">
         <nav class="flex flex-col md:flex-row gap-2 border md:border-0 border-surface-100-800-token bg-surface-50/50 dark:bg-surface-900/50 backdrop-blur-lg rounded-bl-container-token rounded-br-container-token md:rounded-token p-2 shadow-xl">
-            <a href='/' data-sveltekit-preload-data="hover" class="btn md:btn-sm hover:variant-soft-primary {menuItemActive('/')}">Home</a>
-            <a href='/about' data-sveltekit-preload-data="hover" class="btn md:btn-sm hover:variant-soft-primary {menuItemActive('/about')}">About</a>
-            <a href='/projects' data-sveltekit-preload-data="hover" class="btn md:btn-sm hover:variant-soft-primary {menuItemActive('/projects')}">Projects</a>
+  
+                    <a href='/' data-sveltekit-preload-data="hover" class="btn md:btn-sm hover:variant-soft-primary {menuItemActive('/')}">Home</a>
+                    <a href='/about' data-sveltekit-preload-data="hover" class="btn md:btn-sm hover:variant-soft-primary {menuItemActive('/about')}">About</a>
+                    <a href='/projects' data-sveltekit-preload-data="hover" class="btn md:btn-sm hover:variant-soft-primary {menuItemActive('/projects')}">Projects</a>
+
         </nav>
     </section>
 
