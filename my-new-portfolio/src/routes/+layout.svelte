@@ -11,8 +11,6 @@
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
 
 	// SvelteKit Imports
-	import { browser } from '$app/environment';
-	import { page } from '$app/stores';
 	import { afterNavigate } from '$app/navigation';
 
 	// Components & Utility
@@ -25,6 +23,11 @@
 
 	// Global Stylesheets
 	import '../app.postcss';
+
+	// Font-awesome
+	import '@fortawesome/fontawesome-free/css/fontawesome.css';
+	import '@fortawesome/fontawesome-free/css/brands.css';
+	import '@fortawesome/fontawesome-free/css/solid.css';
 
 	// Initialize Store for Modals and Drawers
 	import { initializeStores } from '@skeletonlabs/skeleton';

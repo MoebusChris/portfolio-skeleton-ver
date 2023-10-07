@@ -23,9 +23,7 @@
         drawerStore.open(s);
     }
 
-    function drawerClose(): void {
-        drawerStore.close();
-    }
+
 
     // Lifecycle
     page.subscribe((page) => {
