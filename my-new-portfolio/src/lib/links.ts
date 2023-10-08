@@ -1,25 +1,20 @@
 // Link list
+export type menuLists = Array<{ id: number; label: string; href: string; }>;
 
 export const menuLists = [
     {   
         id: 1,
         label: 'Home',
-        link: [
-            { href: '/' },
-        ],
+        href: '/',
     },
     {   
         id: 2,
         label: 'About',
-        link: [
-            { href: '/about' },
-        ],
+        href: '/about',
     },
     {   
         id: 3,
         label: 'Projects',
-        link: [
-            { href: '/projects' }
-        ]
+        href: '/projects',
     }
 ]
