@@ -60,9 +60,9 @@
 <DocsDrawer />
 
 <!-- App Shell -->
-<AppShell regionPage={allyPageSmoothScroll} scrollGutter="auto">
+<AppShell regionPage={allyPageSmoothScroll} slotPageHeader="sticky top-0 z-10">
 	<!-- Header -->
-	<svelte:fragment slot="header">
+	<svelte:fragment slot="pageHeader">
 		<DocsAppBar />
 	</svelte:fragment>
 

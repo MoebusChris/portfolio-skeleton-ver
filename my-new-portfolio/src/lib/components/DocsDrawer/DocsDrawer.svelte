@@ -1,10 +1,6 @@
 <script lang="ts">
     import { page } from "$app/stores";
     import { getDrawerStore, Drawer } from "@skeletonlabs/skeleton";
-    
-
-    // Types
-    
 
     // Local
     import { menuLists } from "$lib/links";
@@ -30,11 +26,11 @@
 </script>
 
 <Drawer class={classesDrawer} position="top" rounded="rounded-xl" padding="p-2" bgDrawer="bg-tertiary-400" height="h-min">
-    <nav class="list-nav">
+    <nav class="">
         <ul class="text-center text-white my-1">
             {#each menuLists as segment, i}
                 <li>
-                    <a href={segment.href} on:click={() => { onClickAnchor() }}>
+                    <a href={segment.href} on:click={() => { onClickAnchor() }} class={menuItemActive(segment.href)}>
                         <span class="flex-auto">{segment.label}</span>
                     </a>
                 </li>
@@ -43,3 +39,4 @@
         </ul>
     </nav>
 </Drawer>
+
